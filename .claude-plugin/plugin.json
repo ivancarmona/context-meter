@@ -1,0 +1,70 @@
+{
+  "name": "context-meter",
+  "version": "0.2.1",
+  "description": "A live pane beside the chat showing how full the context window is and what fills it.",
+  "author": { "name": "Iván", "url": "https://github.com/ivancarmona" },
+  "homepage": "https://github.com/ivancarmona/context-meter",
+  "repository": "https://github.com/ivancarmona/context-meter",
+  "license": "MIT",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "language": {
+      "type": "string",
+      "title": "Language",
+      "description": "Language of the pane: auto (from settings or system locale), es or en.",
+      "default": "auto",
+      "options": ["auto", "es", "en"]
+    },
+    "warnPercent": {
+      "type": "number",
+      "title": "Warning threshold (%)",
+      "description": "Show a toast once when context usage crosses this percentage.",
+      "default": 80
+    },
+    "showCost": {
+      "type": "boolean",
+      "title": "Show cost",
+      "description": "Show the session's API-equivalent cost in USD (not a real charge on Pro/Max plans).",
+      "default": false
+    },
+    "showRateLimits": {
+      "type": "boolean",
+      "title": "Show plan limits",
+      "description": "Show the 5-hour and weekly usage windows when available.",
+      "default": true
+    },
+    "openPaneOnStart": {
+      "type": "boolean",
+      "title": "Open detail pane on start",
+      "description": "Open the detail pane when a session starts (the summary band above the prompt is always shown).",
+      "default": false
+    },
+    "billing": {
+      "type": "string",
+      "title": "Billing",
+      "description": "auto: a subscription when responses report the 5-hour and weekly windows, API otherwise; plan: plan limits; api: session cost and usage by model.",
+      "default": "auto",
+      "options": ["auto", "plan", "api"]
+    },
+    "currency": {
+      "type": "string",
+      "title": "Currency",
+      "description": "Currency for amounts: eur (converted at usdToEur) or usd.",
+      "default": "eur",
+      "options": ["eur", "usd"]
+    },
+    "usdToEur": {
+      "type": "number",
+      "title": "USD to EUR rate",
+      "description": "Euros per US dollar, for amounts shown in euros. A fixed rate: update it now and then.",
+      "default": 0.86
+    },
+    "placement": {
+      "type": "string",
+      "title": "Summary placement",
+      "description": "auto: footer where the surface draws it (terminal, desktop), band above the prompt elsewhere; footer: footer only; above: band only.",
+      "default": "auto",
+      "options": ["auto", "footer", "above"]
+    }
+  }
+}

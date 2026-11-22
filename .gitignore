@@ -1,0 +1,9 @@
+.claude-plugin/types/
+.mcpb-cache/
+*.log
+.DS_Store
+
+# BMAD: herramienta local, fuera del repo
+_bmad/
+_bmad-output/
+.claude/skills/bmad-*/

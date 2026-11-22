@@ -1,0 +1,5 @@
+{
+  "name": "context-meter",
+  "owner": { "name": "Iván", "url": "https://github.com/ivancarmona" },
+  "plugins": [{ "name": "context-meter", "source": "./" }]
+}
