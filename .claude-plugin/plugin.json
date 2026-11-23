@@ -12,8 +12,7 @@
       "type": "string",
       "title": "Language",
       "description": "Language of the pane: auto (from settings or system locale), es or en.",
-      "default": "auto",
-      "options": ["auto", "es", "en"]
+      "default": "auto"
     },
     "warnPercent": {
       "type": "number",
@@ -43,15 +42,13 @@
       "type": "string",
       "title": "Billing",
       "description": "auto: a subscription when responses report the 5-hour and weekly windows, API otherwise; plan: plan limits; api: session cost and usage by model.",
-      "default": "auto",
-      "options": ["auto", "plan", "api"]
+      "default": "auto"
     },
     "currency": {
       "type": "string",
       "title": "Currency",
       "description": "Currency for amounts: eur (converted at usdToEur) or usd.",
-      "default": "eur",
-      "options": ["eur", "usd"]
+      "default": "eur"
     },
     "usdToEur": {
       "type": "number",
@@ -63,8 +60,7 @@
       "type": "string",
       "title": "Summary placement",
       "description": "auto: footer where the surface draws it (terminal, desktop), band above the prompt elsewhere; footer: footer only; above: band only.",
-      "default": "auto",
-      "options": ["auto", "footer", "above"]
+      "default": "auto"
     }
   }
 }
